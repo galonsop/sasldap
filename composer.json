@@ -1,5 +1,5 @@
 {
-    "name": "galonsop/sas-ldap",
+    "name": "galonsop/sasldap",
     "description": "LDAP Authentication & Management for SAS.",
     "keywords": [
         "ldaprecord",
