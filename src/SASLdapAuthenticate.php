@@ -50,7 +50,7 @@ trait SASLdapAuthenticate{
             $user = User::where('dmsas', $name)->first();
             if($user == null){
                 //Password set as random because it cannot be null
-                $user = User::firstOrCreate(['name' => $ad_user->getName() ?? $name, 'dmsas' => $name, 'password' => Crypt::encryptString(Str::random())]);
+                $user = User::firstOrCreate(['name' => $ad_user->getName() ?? $name, 'dmsas' => $name, 'email' => $name, 'password' => Crypt::encryptString(Str::random())]);
             }
             $user->last_login_at = Carbon::now()->toDateTimeString();
             $user->save();
